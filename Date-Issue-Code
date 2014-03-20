@@ -1,7 +1,8 @@
 global $post;
 $the_skills = get_post_meta($post->ID, 'necessary_skills', true);
 $location = get_post_meta($post->ID, 'location', true);
+$pdate = the_time('m/j/Y');
 
 echo '<li><i class="fa fa-map-marker"></i> '. $location .'</li>';
-echo '<li><i class="fa fa-calendar"></i> '. the_time('m/j/Y') .'</li>';
+echo '<li><i class="fa fa-calendar"></i> Posted on '. $pdate .'</li>';
 echo '<li><i class="fa fa-pencil"></i> '. $the_skills .'</li>';
